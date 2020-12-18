@@ -141,7 +141,9 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 					<button class="button share right">23</button>
 					<button class="button comment left">11</button>
 				</div>
-				
+				<div id ="token">
+
+				</div>
 			</div>
 			<div class="widgets">
 				<div class="widget">
@@ -189,9 +191,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 				<h2>Mario Pereira</h2>
 			</div>
 		</div>
-		<div id ="token">
-
-		</div>
+		
 	<script src="js/jquery.js"></script>
 
 	<script>
@@ -208,10 +208,6 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 							  document.getElementById("token").innerHTML = data.access_token;
 						})
 			  .then(function(response) { 
-				//var project = JSON.parse(response.text());
-				
-				//console.log(response.json());
-			
 			})
 			  .catch(function(err) { console.error(err); });	
 
