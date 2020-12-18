@@ -249,13 +249,17 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 		   }`;
 		  xhttp.open("PUT", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/interest/", true);
 		  xhttp.setRequestHeader("Content-type", "application/json");
-		  xhttp.setRequestHeader("Authorization", "Bearer 00D4W000009304L!AR0AQKMncMLpRfPmgw7IwKlJh0NF7OkQDWnFO3b1iuzBVsAmk92oXqcF3Jda74qgI7XjXQTrWE7Bie.bU6KXSoQBqxshbpV_");
+		 // xhttp.setRequestHeader("Authorization", "Bearer 00D4W000009304L!AR0AQKMncMLpRfPmgw7IwKlJh0NF7OkQDWnFO3b1iuzBVsAmk92oXqcF3Jda74qgI7XjXQTrWE7Bie.bU6KXSoQBqxshbpV_");
+		  xhttp.setRequestHeader("Authorization", "Bearer " + document.getElementById("token").innerHTML );
+		 
 		  xhttp.send(mybody);
 		
 		}
   
 		
-	
+		window.onload = function(e){ 
+			getToken();
+		}
 
 	  </script>
 	</body>
