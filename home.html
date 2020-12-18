@@ -57,7 +57,7 @@
 					A Fifa (Federação Internacional de Futebol Associado — que comanda o futebol em nível mundial) tem um livro de regras, que é traduzido no Brasil pela CBF (Confederação Brasileira de Futebol — entidade que comanda o futebol no país).
 					<img src="img/posts/futebol1.jpeg" class="post_image" /> 
 					<hr/>
-					<button class="button likehand left" onclick="getToken()" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button likehand left" onclick="UserAction('Facebook','Futebol')" ><i class="far fa-thumbs-up"></i></button>
 					<button class="button like right">999</button>
 					<button class="button ac_share right">23</button>
 					<button class="button ac_comment left">11</button>
@@ -69,7 +69,7 @@
 					<hr/>
 					Filme de hoje no sofá. Assistindo aquele filme de ação!!! #filmeEmCasa
 					<hr/>
-					<button class="button likehand left" onclick="UserAction('Filmes')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button likehand left" onclick="UserAction('Facebook','Filmes')" ><i class="far fa-thumbs-up"></i></button>
 					<button class="button like right">999</button>
 					<button class="button share right">23</button>
 					<button class="button comment left">11</button>
@@ -84,7 +84,7 @@
 					<img src="img/posts/futebol2.jpeg" class="post_image" />
 					<hr/>
 
-					<button class="button likehand left" onclick="UserAction('Futebol')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button likehand left" onclick="UserAction('Facebook','Futebol')" ><i class="far fa-thumbs-up"></i></button>
 					<button class="button ac_like right">999</button>
 					<button class="button ac_share right">23</button>
 					<button class="button ac_comment left">11</button>
@@ -97,7 +97,7 @@
 					Nada como viajar e estar em contato com a natureza!
 					<img src="img/posts/3.jpg" class="post_image" />
 					<hr/>
-					<button class="button likehand left" onclick="UserAction('Viagem')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button likehand left" onclick="UserAction('Facebook','Viagem')" ><i class="far fa-thumbs-up"></i></button>
 					<button class="button like right">999</button>
 					<button class="button share right">23</button>
 					<button class="button comment left">11</button>
@@ -110,7 +110,7 @@
 					Se ouvimos tantas coisas ruins sobre a política, por que nos dizem que ela é tão importante?
 Bom, apesar da existência de corrupção e de manipulação de ações para atender interesses específicos no ato político, temos que entender que esse quadro negativo só poderá mudar através da própria política. Isso porque a política é o instrumento de ação de transformação da sociedade.
 					<hr/>
-					<button class="button likehand left" onclick="UserAction('Politica')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button likehand left" onclick="UserAction('Facebook','Politica')" ><i class="far fa-thumbs-up"></i></button>
 					<button class="button ac_like right">999</button>
 					<button class="button share right">23</button>
 					<button class="button ac_comment left">11</button>
@@ -123,7 +123,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 					Este é o Range Rover 2021. Lançado em 1970 e em sua quarta geração, o Range Rover é um dos modelos mais icônicos da história automotiva. Um dos símbolos da Land Rover, o SUV ajudou a criar a imagem de veículos robustos e sofisticados que a marca tem em todo o mundo
 					<img src="img/posts/4.jpg" class="post_image" />
 					<hr/>
-					<button class="button likehand left" onclick="UserAction('Carro')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button likehand left" onclick="UserAction('Facebook','Carro')" ><i class="far fa-thumbs-up"></i></button>
 					<button class="button ac_like right">999</button>
 					<button class="button share right">23</button>
 					<button class="button comment left">11</button>
@@ -136,7 +136,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 					Hoje vamos voltar a falar deste clube que sem dúvida alguma é uma dos gigantes do Brasil, da América e porque não, do Mundo. Vamos falar do Corinthians e de suas goleadas sobre seus adversários. O "Timão" coleciona algumas das maiores goleadas diante de grandes rivais, como os 11 a 0 sobre o Santos, em 1920.
 					<img src="img/posts/futebol3.jpeg" class="post_image" />
 					<hr/>
-					<button class="button likehand left" onclick="UserAction('Futebol')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button likehand left" onclick="UserAction('Facebook','Futebol')" ><i class="far fa-thumbs-up"></i></button>
 					<button class="button ac_like right">999</button>
 					<button class="button share right">23</button>
 					<button class="button comment left">11</button>
@@ -159,8 +159,8 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 					<font>Siga o canal de esportes que possui toda a programação que você merece</font>
 					<hr/>
 					<center>
-						<button class="wid_follow_button">Follow</button>
-						<button class="wid_message_button">Message</button>
+						<button class="wid_follow_button" onclick="UserAction('Twitter','Futebol')">Follow</button>
+						<button class="wid_message_button"  onclick="UserAction('Instagram','Futebol')" >Message</button>
 					</center>
 				</div>
 				<hr/>
@@ -194,8 +194,13 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 		
 	<script src="js/jquery.js"></script>
 
-	<script>
 
+
+
+
+
+
+	<script>
 		function getToken() {
 
 			const URL_TO_FETCH = 'https://cors-anywhere.herokuapp.com/https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9l2zHsylwlpRb7Lu6bFEBdnI4EIr9VpnnNOTm9hm27pQk7ka2vlB95i7B03xpTTISned8KRx2PvWrFPVQ&client_secret=77C216CF11E3372CCA3ECCD1A1940317C91BB7625FD15AEAF3EA016517990938&username=laertekimura@hotmail.com&password=Seth1980Rc5yweGIIFJfqR4Yo1603mkV6'; 
@@ -213,9 +218,40 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 
 			}
 
-			
+		function UserAction(origem, value) {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			   if (this.readyState == 4 && this.status == 200) {
+				   alert('You just liked this article!');
+			   }
+		  };
+		  var mybody = `{
+			"Name" : "" ,
+			"InterestId":"",
+			"Origin":" ` + origem + ` ",
+			"AccountId":"0014W0000285D8h",
+			"Interest":"` +  value + `"
+		   }`;
+		  xhttp.open("PUT", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/interest/", true);
+		  xhttp.setRequestHeader("Content-type", "application/json");
+		 // xhttp.setRequestHeader("Authorization", "Bearer 00D4W000009304L!AR0AQKMncMLpRfPmgw7IwKlJh0NF7OkQDWnFO3b1iuzBVsAmk92oXqcF3Jda74qgI7XjXQTrWE7Bie.bU6KXSoQBqxshbpV_");
+		  xhttp.setRequestHeader("Authorization", "Bearer " + document.getElementById("token").innerHTML );
+		 
+		  xhttp.send(mybody);
+		
+		}
 
-			/*var xhttp = new XMLHttpRequest();
+		
+		window.onload = function(e){ 
+			getToken();
+		}
+
+	  </script>
+	</body>
+</html>
+
+
+/*var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				 if (this.readyState == 4 && this.status == 200) {
 					 //alert('You just liked this article!');
@@ -231,36 +267,3 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 		  
 		  }
 */
-
-
-		function UserAction(value) {
-		  var xhttp = new XMLHttpRequest();
-		  xhttp.onreadystatechange = function() {
-			   if (this.readyState == 4 && this.status == 200) {
-				   alert('You just liked this article!');
-			   }
-		  };
-		  var mybody = `{
-			"Name" :"Facebook site",
-			"ConsumptionId":"",
-			"Origin":"Facebook",
-			"AccountId":"0014W0000285D8h",
-			"Interest":"` +  value + `"
-		   }`;
-		  xhttp.open("PUT", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/interest/", true);
-		  xhttp.setRequestHeader("Content-type", "application/json");
-		 // xhttp.setRequestHeader("Authorization", "Bearer 00D4W000009304L!AR0AQKMncMLpRfPmgw7IwKlJh0NF7OkQDWnFO3b1iuzBVsAmk92oXqcF3Jda74qgI7XjXQTrWE7Bie.bU6KXSoQBqxshbpV_");
-		  xhttp.setRequestHeader("Authorization", "Bearer " + document.getElementById("token").innerHTML );
-		 
-		  xhttp.send(mybody);
-		
-		}
-  
-		
-		window.onload = function(e){ 
-			getToken();
-		}
-
-	  </script>
-	</body>
-</html>
