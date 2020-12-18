@@ -189,6 +189,9 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 				<h2>Mario Pereira</h2>
 			</div>
 		</div>
+		<div id ="token">
+
+		</div>
 	<script src="js/jquery.js"></script>
 
 	<script>
@@ -202,6 +205,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 			  .then(response => response.json())
 			  .then(data => {
 							  console.log(data.access_token); 
+							  document.getElementById("token").innerHTML = data.access_token;
 						})
 			  .then(function(response) { 
 				//var project = JSON.parse(response.text());
