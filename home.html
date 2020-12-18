@@ -1,0 +1,251 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/home.css" />
+		<link rel="stylesheet" href="css/post.css" />
+		<link rel="stylesheet" href="css/widget.css" />
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="css/chat.css" />
+		<script src="https://kit.fontawesome.com/2bdd5b6697.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	
+		<header>
+			<img src="img/header/menu-button.png" class="menu_img"/>
+			<img src="img/cover/Josivaldo.png" 	style="border-radius: 50%; height: 120% "/>
+			<h3 style="color:white;" >Josivaldo Silva</h3>
+			
+			<input type="search" placeholder="Search" />
+			
+			<img src="img/header/user-shape.png" class="nav"/>
+			<img src="img/header/notifications-button.png" class="nav"/>
+			<img src="img/header/conversation-speech-bubbles-.png" class="nav"/>
+			<img src="img/header/burn-button.png" class="nav"/>
+			<img src="img/header/musica-searcher.png" class="nav_s"/>
+		</header>
+		<div class="menu">
+			<div class="menu_element">
+				<img src="img/header/history-clock-button.png" class="element_image" />
+				<h2>My timeline</h2>
+			</div>
+			<div class="menu_element">
+				<img src="img/header/forward-arrow.png" class="element_image" />
+				<h2>Foward</h2>
+			</div>
+			<div class="menu_element">
+				<img src="img/header/settings-cogwheel-button.png" class="element_image" />
+				<h2>Settings</h2>
+			</div>
+			<div class="menu_element">
+				<img src="img/header/birthday-cake.png" class="element_image" />
+				<h2>Bithdates</h2>
+			</div>
+			<div class="menu_element">
+				<img src="img/header/ellipsis.png" class="element_image" />
+				<h2>More...</h2>
+			</div>
+		</div>
+		<div class="feed">
+            <br/><br/>
+			<div class="posts">
+				<div class="post">
+					<img class="profile_pic" src="img/profile/1.jpg" />
+					<a href="#" >Jorge Matinho</a>
+					<font>About 1 hour ago</font>
+					<hr/>
+					A Fifa (Federação Internacional de Futebol Associado — que comanda o futebol em nível mundial) tem um livro de regras, que é traduzido no Brasil pela CBF (Confederação Brasileira de Futebol — entidade que comanda o futebol no país).
+					<img src="img/posts/futebol1.jpeg" class="post_image" /> 
+					<hr/>
+					<button class="button likehand left" onclick="getToken()" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button like right">999</button>
+					<button class="button ac_share right">23</button>
+					<button class="button ac_comment left">11</button>
+				</div>
+				<div class="post">
+					<img class="profile_pic" src="img/profile/2.jpg" />
+					<a href="#" >Larissa</a>
+					<font>About 1 hour ago</font>
+					<hr/>
+					Filme de hoje no sofá. Assistindo aquele filme de ação!!! #filmeEmCasa
+					<hr/>
+					<button class="button likehand left" onclick="UserAction('Filmes')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button like right">999</button>
+					<button class="button share right">23</button>
+					<button class="button comment left">11</button>
+				</div>
+				<div class="post">
+					<img class="profile_pic" src="img/profile/1.jpg" />
+					<a href="#" >Jorge Martinho</a>
+					<font>About 1 hour ago</font>
+					<hr/>
+					Mais uma vez o futebol francês mostra sua força de derrota de goleada seu rival de anos.  
+
+					<img src="img/posts/futebol2.jpeg" class="post_image" />
+					<hr/>
+
+					<button class="button likehand left" onclick="UserAction('Futebol')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button ac_like right">999</button>
+					<button class="button ac_share right">23</button>
+					<button class="button ac_comment left">11</button>
+				</div>
+				<div class="post">
+					<img class="profile_pic" src="img/profile/4.jpg" />
+					<a href="#" >Clarinha </a>
+					<font>About 1 hour ago</font>
+					<hr/>
+					Nada como viajar e estar em contato com a natureza!
+					<img src="img/posts/3.jpg" class="post_image" />
+					<hr/>
+					<button class="button likehand left" onclick="UserAction('Viagem')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button like right">999</button>
+					<button class="button share right">23</button>
+					<button class="button comment left">11</button>
+				</div>
+				<div class="post">
+					<img class="profile_pic" src="img/profile/5.jpg" />
+					<a href="#" >Eduardo Cava</a>
+					<font>About 1 hour ago</font>
+					<hr/>
+					Se ouvimos tantas coisas ruins sobre a política, por que nos dizem que ela é tão importante?
+Bom, apesar da existência de corrupção e de manipulação de ações para atender interesses específicos no ato político, temos que entender que esse quadro negativo só poderá mudar através da própria política. Isso porque a política é o instrumento de ação de transformação da sociedade.
+					<hr/>
+					<button class="button likehand left" onclick="UserAction('Politica')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button ac_like right">999</button>
+					<button class="button share right">23</button>
+					<button class="button ac_comment left">11</button>
+				</div>
+				<div class="post">
+					<img class="profile_pic" src="img/profile/3.jpg" />
+					<a href="#" >Mario Pereira</a>
+					<font>About 1 hour ago</font>
+					<hr/>
+					Este é o Range Rover 2021. Lançado em 1970 e em sua quarta geração, o Range Rover é um dos modelos mais icônicos da história automotiva. Um dos símbolos da Land Rover, o SUV ajudou a criar a imagem de veículos robustos e sofisticados que a marca tem em todo o mundo
+					<img src="img/posts/4.jpg" class="post_image" />
+					<hr/>
+					<button class="button likehand left" onclick="UserAction('Carro')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button ac_like right">999</button>
+					<button class="button share right">23</button>
+					<button class="button comment left">11</button>
+				</div>
+				<div class="post">
+					<img class="profile_pic" src="img/profile/1.jpg" />
+					<a href="#" >Jorge Martinho</a>
+					<font>About 1 hour ago</font>
+					<hr/>
+					Hoje vamos voltar a falar deste clube que sem dúvida alguma é uma dos gigantes do Brasil, da América e porque não, do Mundo. Vamos falar do Corinthians e de suas goleadas sobre seus adversários. O "Timão" coleciona algumas das maiores goleadas diante de grandes rivais, como os 11 a 0 sobre o Santos, em 1920.
+					<img src="img/posts/futebol3.jpeg" class="post_image" />
+					<hr/>
+					<button class="button likehand left" onclick="UserAction('Futebol')" ><i class="far fa-thumbs-up"></i></button>
+					<button class="button ac_like right">999</button>
+					<button class="button share right">23</button>
+					<button class="button comment left">11</button>
+				</div>
+				
+			</div>
+			<div class="widgets">
+				<div class="widget">
+					<img src="img/header/idea.png" class="wid_image" />
+					<h2>This is the next step</h2>
+					<hr/>
+					Receba dicas diárias sobre seus amigos
+					<button class="wid_full_button">START</button>
+				</div>
+				<div class="widget profile_widget">
+					<img src="img/posts/futebol-tv-premiere.jpg" style="height: 145;"/>
+					
+					<font>Siga o canal de esportes que possui toda a programação que você merece</font>
+					<hr/>
+					<center>
+						<button class="wid_follow_button">Follow</button>
+						<button class="wid_message_button">Message</button>
+					</center>
+				</div>
+				<hr/>
+				<h2>Popular Hashtags</h2>
+				<hr/>
+				<button class="taq">#Premiere</button>
+				<button class="taq">#Futebol</button>
+				<button class="taq">#Esportes</button>
+				<button class="taq">#Carros</button>
+				<button class="taq">#HBO</button>
+				<button class="taq">#music</button>
+				<button class="taq">#Viagens</button>
+		
+			</div>
+		</div>
+		<div class="chat">
+			<h4 style="text-align: center; color:#2A80BA; padding-left: 20px; ">Chat Available</h4>
+			<div class="chat_element">
+				<img src="img/profile/4.jpg" class="element_image" />
+				<h2>Maria Clara</h2>
+			</div>
+			<div class="chat_element">
+				<img src="img/profile/5.jpg" class="element_image" />
+				<h2>Eduardo Cava</h2>
+			</div>
+			<div class="chat_element">
+				<img src="img/profile/3.jpg" class="element_image" />
+				<h2>Mario Pereira</h2>
+			</div>
+		</div>
+	<script src="js/jquery.js"></script>
+
+	<script>
+
+		function getToken() {
+
+			const URL_TO_FETCH = 'https://cors-anywhere.herokuapp.com/https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9l2zHsylwlpRb7Lu6bFEBdnI4EIr9VpnnNOTm9hm27pQk7ka2vlB95i7B03xpTTISned8KRx2PvWrFPVQ&client_secret=77C216CF11E3372CCA3ECCD1A1940317C91BB7625FD15AEAF3EA016517990938&username=laertekimura@hotmail.com&password=Seth1980Rc5yweGIIFJfqR4Yo1603mkV6'; 
+			fetch(URL_TO_FETCH, { 
+				method: 'post' // opcional 
+			})
+			  .then(function(response) { 
+				console.log(response.text());
+			})
+			  .catch(function(err) { console.error(err); });	
+
+			/*var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				 if (this.readyState == 4 && this.status == 200) {
+					 //alert('You just liked this article!');
+				 }
+			};
+			*/
+			//xhttp.open("POST", 'https://cors-anywhere.herokuapp.com/https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9l2zHsylwlpRb7Lu6bFEBdnI4EIr9VpnnNOTm9hm27pQk7ka2vlB95i7B03xpTTISned8KRx2PvWrFPVQ&client_secret=77C216CF11E3372CCA3ECCD1A1940317C91BB7625FD15AEAF3EA016517990938&username=laertekimura@hotmail.com&password=Seth1980Rc5yweGIIFJfqR4Yo1603mkV6', true);
+			//xhttp.setRequestHeader("Content-type", "application/json");
+			//xhttp.setRequestHeader("Authorization", "Bearer 00D4W000009304L!AR0AQKMncMLpRfPmgw7IwKlJh0NF7OkQDWnFO3b1iuzBVsAmk92oXqcF3Jda74qgI7XjXQTrWE7Bie.bU6KXSoQBqxshbpV_");
+			//xhttp.send();
+			//var resultText = xhttp.responseText;
+			
+		  
+		  }
+
+
+
+		function UserAction(value) {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			   if (this.readyState == 4 && this.status == 200) {
+				   alert('You just liked this article!');
+			   }
+		  };
+		  var mybody = `{
+			"Name" :"Facebook site",
+			"ConsumptionId":"",
+			"Origin":"Facebook",
+			"AccountId":"0014W0000285D8h",
+			"Interest":"` +  value + `"
+		   }`;
+		  xhttp.open("PUT", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/interest/", true);
+		  xhttp.setRequestHeader("Content-type", "application/json");
+		  xhttp.setRequestHeader("Authorization", "Bearer 00D4W000009304L!AR0AQKMncMLpRfPmgw7IwKlJh0NF7OkQDWnFO3b1iuzBVsAmk92oXqcF3Jda74qgI7XjXQTrWE7Bie.bU6KXSoQBqxshbpV_");
+		  xhttp.send(mybody);
+		
+		}
+  
+		
+	
+
+	  </script>
+	</body>
+</html>
