@@ -200,9 +200,9 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 				method: 'post' // opcional 
 			})
 			  .then(function(response) { 
-				  
 				var tokenJson = response.json();
-				console.log(tokenJson[0].access_token);
+				console.log(tokenJson.access_token);
+				console.log(response.text());
 			})
 			  .catch(function(err) { console.error(err); });	
 
