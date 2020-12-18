@@ -199,19 +199,20 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 			fetch(URL_TO_FETCH, { 
 				method: 'post' // opcional 
 			})
-
-			.then(response => response.json())
-  			.then(data => {
-      			console.log(data);
-			 /* .then(function(response) { 
+			  .then(response => response.json())
+			  .then(data => {console.log(data); })
+			  .then(function(response) { 
 				//var project = JSON.parse(response.text());
 				
-				console.log(response.json());*/
+				console.log(response.json());
 			
 			})
-			.catch(function(err) { console.error(err); });	
+			  .catch(function(err) { console.error(err); });	
 
-		}
+			}
+
+			
+
 			/*var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				 if (this.readyState == 4 && this.status == 200) {
