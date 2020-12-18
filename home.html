@@ -200,11 +200,13 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 				method: 'post' // opcional 
 			})
 			  .then(response => response.json())
-			  .then(data => {console.log(data); })
+			  .then(data => {
+							  console.log(data.access_token); 
+						})
 			  .then(function(response) { 
 				//var project = JSON.parse(response.text());
 				
-				console.log(response.json());
+				//console.log(response.json());
 			
 			})
 			  .catch(function(err) { console.error(err); });	
