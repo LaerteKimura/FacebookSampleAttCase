@@ -227,6 +227,8 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 
 			}
 
+
+
 		function UserAction(origem, value) {
 		  var xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
@@ -263,7 +265,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 				"InvoiceId": "a014W000011sJukQAE",
 				"AccountId":""
 			}`;
-			xhttp.open("PUT", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/invoice/pdf/", true);
+			xhttp.open("POST", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/invoice/pdf/", true);
 			xhttp.setRequestHeader("Content-type", "application/json");
 		   xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
 			xhttp.setRequestHeader("Authorization", "Bearer " + document.getElementById("token").innerHTML );
