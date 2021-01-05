@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/menu.css" />
 		<link rel="stylesheet" href="css/chat.css" />
 		<script src="https://kit.fontawesome.com/2bdd5b6697.js" crossorigin="anonymous"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jsforce/1.9.1/jsforce.min.js"></script>
 	</head>
 	<body>
 	
@@ -150,7 +151,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 				<div id="pdf">
 
 				</div>
-
+				
 			</div>
 			<div class="widgets">
 				<div class="widget">
@@ -228,6 +229,27 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 			}
 
 
+		/*	function getToken(origem, value) {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					 if (this.readyState == 4 && this.status == 200) {
+						var jsonResponse = JSON.parse(xhttp.responseText);
+						console.log(jsonResponse.access_token); 
+						document.getElementById("token").innerHTML = jsonResponse.access_token;
+					 }
+				};
+				
+				xhttp.open("POST", "https://cors-anywhere.herokuapp.com/https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9l2zHsylwlpRb7Lu6bFEBdnI4EIr9VpnnNOTm9hm27pQk7ka2vlB95i7B03xpTTISned8KRx2PvWrFPVQ&client_secret=77C216CF11E3372CCA3ECCD1A1940317C91BB7625FD15AEAF3EA016517990938&username=laertekimura@hotmail.com&password=Seth1980Rc5yweGIIFJfqR4Yo1603mkV6", true);
+				xhttp.setRequestHeader("Content-type", "application/json");
+				xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+			
+				xhttp.send();
+				
+			  }
+*/
+
+			
+
 
 		function UserAction(origem, value) {
 		  var xhttp = new XMLHttpRequest();
@@ -267,7 +289,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 			}`;
 			xhttp.open("POST", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/invoice/pdf/", true);
 			xhttp.setRequestHeader("Content-type", "application/json");
-		   xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+		    xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
 			xhttp.setRequestHeader("Authorization", "Bearer " + document.getElementById("token").innerHTML );
 		   
 			xhttp.send(mybody);
@@ -283,8 +305,10 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 			getToken();
 		}
 
+	
 	  </script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.js"></script>
+	  
 	</body>
 </html>
 
