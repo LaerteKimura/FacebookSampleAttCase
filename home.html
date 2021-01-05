@@ -144,6 +144,13 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 				<div id ="token">
 
 				</div>
+				
+				<button class="button likehand left" onclick="loadpdf()" ><i class="far fa-thumbs-up"></i></button>
+				<input type="file"/>
+				<div id="pdf">
+
+				</div>
+
 			</div>
 			<div class="widgets">
 				<div class="widget">
@@ -228,7 +235,7 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 		  var mybody = `{
 			"Name" : "" ,
 			"InterestId":"",
-			"Origin":" ` + origem + ` ",
+			"Origin":"` + origem + `",
 			"AccountId":"0014W0000285D8h",
 			"Interest":"` +  value + `"
 		   }`;
@@ -241,12 +248,38 @@ Bom, apesar da existência de corrupção e de manipulação de ações para ate
 		
 		}
 
+		function loadpdf(){
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					alert('PDF!');
+				}
+			};
+			var mybody = `{
+				"Name" : "" ,
+				"InvoiceId": "a014W000011sJukQAE",
+				"AccountId":""
+			}`;
+			xhttp.open("PUT", "https://cors-anywhere.herokuapp.com/https://gftbrasil9-dev-ed.my.salesforce.com/services/apexrest/customer/invoice/pdf/", true);
+			xhttp.setRequestHeader("Content-type", "application/json");
+		 
+			xhttp.setRequestHeader("Authorization", "Bearer " + document.getElementById("token").innerHTML );
+		   
+			xhttp.send(mybody);
+			
+
+			var pdf = document.querySelector('pdf');
+			pdf.onchange = function(){
+				saveAs(this.files[0], 'yourFile.pdf');
+			};
+		}
 		
 		window.onload = function(e){ 
 			getToken();
 		}
 
 	  </script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.js"></script>
 	</body>
 </html>
 
